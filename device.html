@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Full-Width Divs</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s;
+            user-select: none;
+        }
+        body {
+            margin-left: 10px;
+            margin-right: 10px;
+            font-family: Arial, sans-serif;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        span {
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+        .device {
+            width: 100%; /* Full width */
+            height: 80px;
+            font-size: 20px;
+            color: black;
+            border: 2px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(45deg, black 50%, white 50%);
+            background-size: 210% 100%;
+            background-position: 100% 0;
+            cursor: pointer;
+            margin: 10px 0; /* Add some spacing between divs */
+        }
+        .device:hover {
+            background-position: 0 0;
+            color: white;
+            letter-spacing: 2px;
+        }
+        .device input {
+            height: 20px;
+            width: 20px;
+        }
+        button {
+            width: 100%; /* Full width */
+            max-width: 300px;
+            margin: 20px auto;
+            display: block;
+            height: 60px;
+            font-size: 20px;
+            color: black;
+            background: linear-gradient(45deg, black 50%, white 50%);
+            background-size: 210% 100%;
+            background-position: 100% 0;
+            border: 2px solid black;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-position: 0 0;
+            color: white;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Your Brand</h1>
+    <span>Note: For styling purposes only</span>
+
+    <div class="device" onclick="selectRadio('redmi')">
+        <label>Redmi</label>
+        <input id="redmi" type="radio" name="device" value="redmi">
+    </div>
+    <div class="device" onclick="selectRadio('realme')">
+        <label>Realme</label>
+        <input id="realme" type="radio" name="device" value="realme">
+    </div>
+    <div class="device" onclick="selectRadio('moto')">
+        <label>Moto</label>
+        <input id="moto" type="radio" name="device" value="moto">
+    </div>
+    <div class="device" onclick="selectRadio('samsung')">
+        <label>Samsung</label>
+        <input id="samsung" type="radio" name="device" value="samsung">
+    </div>
+    <div class="device" onclick="selectRadio('oneplus')">
+        <label>OnePlus</label>
+        <input id="oneplus" type="radio" name="device" value="oneplus">
+    </div>
+    <div class="device" onclick="selectRadio('oppo')">
+        <label>Oppo</label>
+        <input id="oppo" type="radio" name="device" value="oppo">
+    </div>
+    <div class="device" onclick="selectRadio('vivo')">
+        <label>Vivo</label>
+        <input id="vivo" type="radio" name="device" value="vivo">
+    </div>
+    <div class="device" onclick="selectRadio('nokia')">
+        <label>Nokia</label>
+        <input id="nokia" type="radio" name="device" value="nokia">
+    </div>
+    <div class="device" onclick="selectRadio('poco')">
+        <label>Poco</label>
+        <input id="poco" type="radio" name="device" value="poco">
+    </div>
+
+    <button>Next</button>
+
+    <script>
+        function selectRadio(id) {
+            document.getElementById(id).checked = true;
+        }
+    </script>
+</body>
+</html>
